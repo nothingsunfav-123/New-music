@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: new-music-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    region: oregon  # you can change to frankfurt if you’re in Europe
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
